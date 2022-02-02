@@ -1,4 +1,4 @@
-# SORAssembly - (coming soon) https://sorassembly.io ![CI](https://github.com/NoodleSploder/sorassembly/workflows/CI/badge.svg?branch=master)
+# SORAssembly - (coming soon) https://sorassembly.io 
 
 The place to discuss and vote on SORA governance.
 
