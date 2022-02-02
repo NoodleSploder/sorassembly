@@ -1,4 +1,4 @@
-# SORAssembly - (coming soon) https://sorassembly.io ![CI](https://github.com/NoodleSploder/sorassembly/workflows/CI/badge.svg?branch=master) <img width="750" alt="web3 foundation_grants_badge_black" src="https://user-images.githubusercontent.com/874046/119712025-cb8ae900-be7d-11eb-9ca7-cac14991bb5e.png">
+# SORAssembly - (coming soon) https://sorassembly.io ![CI](https://github.com/NoodleSploder/sorassembly/workflows/CI/badge.svg?branch=master)
 
 The place to discuss and vote on SORA governance.
 
