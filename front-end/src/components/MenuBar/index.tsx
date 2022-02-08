@@ -11,7 +11,7 @@ import { Accordion, Dropdown, Icon, Menu, Responsive, Sidebar, SidebarPusher } f
 import NetworkDropdown from 'src/ui-components/NetworkDropdown';
 import getNetwork from 'src/util/getNetwork';
 
-import logo from '../../assets/polkassembly-logo.png';
+import logo from '../../assets/sora-logo.png';
 import { UserDetailsContext } from '../../context/UserDetailsContext';
 import { useLogoutMutation } from '../../generated/graphql';
 import { useFetchLatestBlockNumberQuery } from '../../generated/graphql';
@@ -36,6 +36,7 @@ const MenuBar = ({ className } : Props): JSX.Element => {
 
 	const latestBlockNumber = data?.blockNumbers[0]?.number;
 
+	// TODO - Update for sorascan
 	const blockUrl = `https://${NETWORK}.subscan.io/block/${latestBlockNumber}`;
 
 	const handleLogout = async () => {
@@ -107,7 +108,7 @@ const MenuBar = ({ className } : Props): JSX.Element => {
 		<>
 			<Responsive maxWidth={Responsive.onlyTablet.maxWidth}>
 				<Menu className={`${className} ${NETWORK}`} inverted widths={2} id='menubar'>
-					<Menu.Item as={NavLink} to="/" className='logo' id='title' onClick={handleClose}><img alt='Polkassembly Logo' src={logo} /></Menu.Item>
+					<Menu.Item as={NavLink} to="/" className='logo' id='title' onClick={handleClose}><img alt='SORAssembly Logo' src={logo} /></Menu.Item>
 					<Menu.Menu position="right">
 						<NetworkDropdown />
 						<Menu.Item onClick={handleToggle} id='rightmenu'>
@@ -159,7 +160,7 @@ const MenuBar = ({ className } : Props): JSX.Element => {
 			</Responsive>
 			<Responsive minWidth={Responsive.onlyComputer.minWidth}>
 				<Menu className={`${className} ${NETWORK}`} stackable inverted borderless>
-					<Menu.Item as={NavLink} to="/" className='logo' id='title'><img alt='Polkassembly Logo' src={logo} /></Menu.Item>
+					<Menu.Item as={NavLink} to="/" className='logo' id='title'><img alt='SORAssembly Logo' src={logo} /></Menu.Item>
 					{contentItems.map((item, index) => <Menu.Item as={NavLink} className='desktop_items' key={index} {...item} />)}
 					<Menu.Item className='desktop_items'>
 						<Dropdown trigger={<>On-chain</>} icon={caretIcon} item={true}>

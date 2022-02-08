@@ -11,6 +11,7 @@ import kusamaLogo from 'src/assets/kusama-logo.gif';
 import moonbeamLogo from 'src/assets/moonbeam-logo.png';
 import moonriverLogo from 'src/assets/moonriver-logo.png';
 import polkadotLogo from 'src/assets/polkadot-logo.jpg';
+import soraLogo from 'src/assets/sora-logo.png';
 import { network } from 'src/global/networkConstants';
 import getNetwork from 'src/util/getNetwork';
 
@@ -39,6 +40,8 @@ const getNetworkImage = (showNetwork: string) => {
 		return kiltLogo;
 	case network.BIFROST:
 		return bifrostLogo;
+	case network.SORA:
+		return soraLogo;
 	default:
 		return polkadotLogo;
 	}
@@ -54,6 +57,10 @@ const StyledNetworkItem = ({ showNetwork }: {showNetwork: string}) => {
 };
 
 const NetworkOptions: DropdownItemProps[] = [
+	{
+		children: <StyledNetworkItem showNetwork={network.SORA}/>,
+		value: network.SORA
+	},
 	{
 		children: <StyledNetworkItem showNetwork={network.POLKADOT}/>,
 		value: network.POLKADOT
@@ -91,10 +98,12 @@ const NetworkDropdown = ({ className }: Props) =>  {
 			return null;
 		}
 		let domain = 'network';
-		if (data.value === network.POLKADOT || data.value === network.KUSAMA){
-			domain = 'io';
+		if (data.value === network.SORA){
+			domain = 'com';
+		} else {
+			window.location.href = `https://${data.value}.sorassembly.${domain}`;
 		}
-		window.location.href = `https://${data.value}.polkassembly.${domain}`;
+		
 		return null;
 	};
 

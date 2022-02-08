@@ -10,12 +10,14 @@ export const network = {
 	KUSAMA: 'kusama',
 	MOONBEAM: 'moonbeam',
 	MOONRIVER: 'moonriver',
-	POLKADOT: 'polkadot'
+	POLKADOT: 'polkadot',
+	SORA: 'SORA'
 };
 
 export const tokenSymbol = {
 	DOT: 'DOT',
-	KSM: 'KSM'
+	KSM: 'KSM',
+	XOR: 'XOR'
 };
 
 export const chainProperties: ChainPropType = {
@@ -30,7 +32,14 @@ export const chainProperties: ChainPropType = {
 		ss58Format: 0,
 		tokenDecimals: 10,
 		tokenSymbol: tokenSymbol.DOT
+	},
+	[network.SORA]: {
+		blockTime: 6000,
+		ss58Format: 69,
+		tokenDecimals: 18,
+		tokenSymbol: tokenSymbol.XOR
 	}
+	
 };
 
 export const chainLinks: ChainLinksType = {
@@ -53,10 +62,21 @@ export const chainLinks: ChainLinksType = {
 		telegram: 'https://t.me/kusamanetworkofficial',
 		twitter: 'https://twitter.com/kusamanetwork',
 		youtube: 'https://www.youtube.com/channel/UCq4MRrQhdoIR0b44GxcCPxw'
+	},
+	[network.SORA]: {
+		blockExplorer: 'https://sorascan.io/',
+		discord: 'https://discord.gg/9AWjTf8wSk',
+		github: 'https://github.com/paritytech/polkadot',
+		homepage: 'https://kusama.network/',
+		reddit: 'https://www.reddit.com/r/Kusama/',
+		telegram: 'https://t.me/kusamanetworkofficial',
+		twitter: 'https://twitter.com/kusamanetwork',
+		youtube: 'https://www.youtube.com/channel/UCq4MRrQhdoIR0b44GxcCPxw'
 	}
 };
 
 export const chainDetails: { [index: string]: string} = {
 	[network.POLKADOT]: 'Polkadot enables scalability by allowing specialized blockchains to communicate with each other in a secure, trust-free environment. Polkadot is built to connect and secure unique blockchains, whether they be public, permission-less networks, private consortium chains, or oracles and other Web3 technologies. It enables an internet where independent blockchains can exchange information under common security guarantees. Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of the stake can always command the network.',
-	[network.KUSAMA]: 'Kusama is an early release of Polkadot: a scalable, multichain network for radical innovation. Kusama serves as a proving ground that allows teams and developers to build and deploy a parachain, and experiment with Polkadot’s governance and NPoS functionality in a real environment.'
+	[network.KUSAMA]: 'Kusama is an early release of Polkadot: a scalable, multichain network for radical innovation. Kusama serves as a proving ground that allows teams and developers to build and deploy a parachain, and experiment with Polkadot’s governance and NPoS functionality in a real environment.',
+	[network.SORA]: 'Many Worlds.  One Economy'
 };

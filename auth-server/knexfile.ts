@@ -10,6 +10,9 @@ dotenv.config();
 const devConnectionUrl = process.env.DATABASE_URL;
 const testConnectionUrl = process.env.TEST_DATABASE_URL;
 
+console.log("Noodle - " + devConnectionUrl);
+console.log("Noodle - " + testConnectionUrl);
+
 const config: Config = {
 	development: {
 		client: 'postgresql',

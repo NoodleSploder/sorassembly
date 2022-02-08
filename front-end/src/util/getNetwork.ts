@@ -10,7 +10,9 @@ import { Network } from '../types';
  */
 
 export default function (): Network {
-	const network = process.env.REACT_APP_NETWORK;
+	//const network = process.env.REACT_APP_NETWORK;
+
+	const network = 'SORA';
 
 	if (!network) {
 		throw Error('Please set the REACT_APP_NETWORK environment variable');

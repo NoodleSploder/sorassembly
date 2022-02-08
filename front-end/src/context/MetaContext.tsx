@@ -9,18 +9,18 @@ import getNetwork from '../util/getNetwork';
 
 const network = getNetwork();
 
-const title = `Polkassembly | ${network}`;
-const description = `polkassembly, discussion platform for ${network} governance`;
+const title = `SORAssembly | ${network}`;
+const description = `SORAssembly, discussion platform for ${network} governance`;
 
 const initialMetaContext : MetaContextType = {
 	description,
-	image: `https://${network}.polkassembly.io/static/media/polkassembly-logo.aa0e69ae.png`,
+	image: `https://${network}.sorassembly.io/static/media/polkassembly-logo.aa0e69ae.png`,
 	setMetaContextState : (): void => {
 		throw new Error('setMetaContextState function must be overridden');
 	},
 	title,
 	type: 'website',
-	url: `https://${network}.polkassembly.io/`
+	url: `https://${network}.sorassembly.io/`
 };
 
 export const MetaContext = createContext(initialMetaContext);

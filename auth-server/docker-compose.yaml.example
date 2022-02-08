@@ -11,9 +11,9 @@ services:
     ports:
     - "5431:5432"
     environment:
-      POSTGRES_USER: <user>
-      POSTGRES_PASSWORD: <password>
-      POSTGRES_DB: governance-auth
+      POSTGRES_USER: sora
+      POSTGRES_PASSWORD: H4w4ii11!!
+      POSTGRES_DB: sora-governance-auth
       PGDATA: /var/lib/postgresql/data
     volumes:
     # persistent data locally
