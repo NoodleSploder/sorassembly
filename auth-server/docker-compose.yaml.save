@@ -1,0 +1,20 @@
+version: "3.6"
+services:
+  redis:
+    image: redis
+    command: redis-server --requirepass <redis secret>
+    ports:
+      - "6379:6379"
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+    - "5431:5432"
+    environment:
+      POSTGRES_USER: sora
+      POSTGRES_PASSWORD: H4w4ii12REDISPASSWORD!!
+      POSTGRES_DB: sora-governance-auth
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+    # persistent data locally
+    - /var/polkassembly/auth-server/data:/var/lib/postgresql/data
