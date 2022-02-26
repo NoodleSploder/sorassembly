@@ -3,8 +3,9 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 import { ApiPromise, WsProvider } from '@polkadot/api';
+import type { BlockNumber } from '@polkadot/types/interfaces/runtime';
 import { getSpecTypes } from '@polkadot/types-known';
-import { BlockNumber, Hash } from '@polkadot/types/interfaces';
+import { Hash } from '@polkadot/types/interfaces';
 import { logger } from '@polkadot/util';
 
 import { prisma } from './generated/prisma-client';
@@ -104,6 +105,8 @@ export async function nodeWatcher(): Promise<unknown> {
           l.warn(`blockIndex: ${blockIndex}`);
           l.warn(`lastKnownBestBlock: ${lastKnownBestBlock}`);
           l.warn(`lastKnownBestFinalized: ${lastKnownBestFinalized}`);
+
+	  //const blockNumber: BlockNumber;
 
           const blockNumber: BlockNumber = api.createType(
             'BlockNumber',
